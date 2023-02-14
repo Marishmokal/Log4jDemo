@@ -1,0 +1,8 @@
+2023-02-14 15:52:12,658 FATAL c.p.l.Helloworld {Transaction id=12345} [main] Fatal level event
+2023-02-14 15:52:12,679 ERROR c.p.l.Helloworld {Transaction id=12345} [main] Error level event 
+2023-02-14 15:52:12,680 WARN c.p.l.Helloworld {Transaction id=12345} [main] Warn level event
+2023-02-14 15:52:12,681 INFO c.p.l.Helloworld {Transaction id=12345} [main] Info level event 
+2023-02-14 15:52:12,681 DEBUG c.p.l.Helloworld {Transaction id=12345} [main] Debug level event
+2023-02-14 15:52:12,682 TRACE c.p.l.Helloworld {Transaction id=12345} [main] Trace level event 
+2023-02-14 15:52:12,682 INFO c.p.l.Helloworld {Transaction id=12345} [main] addition method started
+2023-02-14 15:52:12,689 INFO c.p.l.Helloworld {Transaction id=12345} [main] result is30

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="testlog4j2" packages="">
+  <Properties>
+    <Property name="baseDir">E:\MarishSts\Log4jDemo</Property>
+  </Properties>
+  
+  <Appenders>
+
+  <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %X [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+  
+    <RollingFile name="RollingFile" fileName="${baseDir}/app.log"
+          filePattern="${baseDir}/app-%d{yyyy-MM-dd-HH-mm}.log">
+      <PatternLayout pattern="%d %p %c{1.} %X [%t] %m%n" />
+      <!-- 
+      <CronTriggeringPolicy schedule="0 0 0 * * ?"/>
+      -->
+      <!-- 
+      <CronTriggeringPolicy schedule="0 0/1 * * * ?"/>
+       -->
+      <TimeBasedTriggeringPolicy interval="1"/><!-- como el filePattern tiene como unidad minima el minuto, se hara cada 1 minutos -->
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+    <Root level="ALL">
+      <AppenderRef ref="RollingFile"/>
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
